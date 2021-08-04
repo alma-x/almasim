@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- SIMULAITON ENVIRONMENT -->
+
+  <!-- send robot urdf to param server -->
+
+  <param name="table_description" 
+	command="$(find xacro)/xacro.py 
+		$(find almasim)/model/erc_sim.sdf" />
+
+  <!-- push robot_description to factory and spawn robot in gazebo -->
+  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model"
+        args="-urdf 
+							-param robot_description 
+							-model robot 
+							-x 0 -y 0 -z 0.6 
+							-J robot::shoulder_lift_joint -1.5707 
+							-unpause "
+        respawn="false" output="screen" />
+
+
+
+
+<!-- send table urdf to param server -->
+   3   <param name="table_description" command="$(find xacro)/xacro.py $(find gazebo_worlds)/objects/table.urdf.xacro" />
+   4 
+   5   <!-- push table_description to factory and spawn robot in gazebo -->
+   6   <node name="spawn_table" pkg="gazebo" type="spawn_model" args="-urdf -param table_description -z 0.01 -model table_model" respawn="false" output="screen" />
+
+</launch>

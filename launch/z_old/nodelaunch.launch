@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<launch>
+<!--cv routine-->
+  <node name="roscamAruco1" 
+	pkg="simulation-cv" type="roscamAruco3.py" 
+	launch-prefix="xterm -e" output="screen" 
+	respawn="true" respawn_delay="3"
+ 	/>
+
+  <node name="arucoPanel3.py" 
+	pkg="simulation-cv" type="arucoPanel3.py" 
+	launch-prefix="xterm -e" output="screen"
+	/>
+
+  <node name="panoramic" 
+	pkg="simulation-cv" type="panoramic3.py" 
+	launch-prefix="xterm -e" output="screen"
+	/>
+
+  <node name="bridge" 
+	pkg="ur3_control" type="bridge" 
+	launch-prefix="xterm -e" output="screen"
+	/>
+
+  <!--high level control routine-->
+  <node name="controlLord" 
+	pkg="ur3_control" type="ERC" 
+	output="screen" launch-prefix="xterm -e" 
+	respawn="true" respawn_delay="3" 
+	/>
+</launch>

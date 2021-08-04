@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<launch>
+  <node name="spawnCube5" 
+	pkg="gazebo_ros" type="spawn_model" 
+	args="-sdf 
+	-model cubo5s 
+	-x -0.35 -y -0.4 -z 0.45 
+	-file $(find almasim_ur3)/models/z_old/sdf/cube5single.sdf"
+	></node>
+
+  <node name="spawnCentrifuga" 
+	pkg="gazebo_ros" type="spawn_model" 
+	args="-sdf 
+	-model centrifuga 
+	-x -0.95 -y 0 -z 0.2 -Y 0.66 
+	-file $(find almasim_ur3)/models/z_old/sdf/centrifuga.sdf"
+	></node>
+
+  <node name="spawnPannello" 
+	pkg="gazebo_ros" type="spawn_model" 
+	args="-sdf 
+	-model pannello 
+	-x 0 -y 0.21 -z 0 -R -1.57 -Y -1.57 
+	-file $(find almasim_ur3)/models/z_old/sdf/panel.sdf"
+	></node>
+
+  <!--include file = "$(find simulation)/aruco.launch.xml">
+    <arg name="node_name"    value="aruco_single_582"/> 
+    <arg name="markerId"     value="582"/> 
+    <arg name="markerSize"   value="0.45"/>  
+    <arg name="marker_frame" value="aruco_582"/>
+    <arg name="reference_frame"    value="/world"/>  
+  </include-->
+</launch>
+

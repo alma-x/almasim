@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<launch>
+<!--SIMULATION-->
+
+  <!--<include file="$(find simulation)/launch/simulator.launch"/>-->
+  <!--<include file="$(find simulation)/launch/small/simulator_small.launch"/> headless-->
+  <arg name="lite" default="false" />
+  <arg unless="$(arg lite)" name="show_gui" value="true" />
+  <arg    if="$(arg lite)" name="show_gui" value="false" />
+  <!--for respawn arg name="zombie" default="true" /-->
+  <!--for python version arg name="pyv3" default="false" /-->
+  <!--for sensors implementatin arg name="mysensors" default="" /-->
+  <!--for models exclusion arg name="unhabit" default="false" /-->
+
+  	<!-- gazebo -->
+  <include file="$(find ur_gazebo)/launch/ur3.launch">
+	<arg name="gui" value="$(arg show_gui)"/>
+  </include>
+
+  <!-- moveit -->
+  <include file="$(find ur3_moveit_config)/launch/ur3_moveit_planning_execution.launch">
+  	<arg name="sim" default="true"/>
+  </include>
+  
+  <!-- rviz-->
+  <group unless="$(arg lite)">
+  	<include file="$(find ur3_moveit_config)/launch/moveit_rviz.launch">
+	  	<arg name="config" default="true"/>
+	  </include> 
+  </group>
+
+  <!--populate-->
+  <include file="$(find almasim_ur3)/launch/populate.launch"/>
+
+<!--NODES-->
+   <include file="$(find almasim_ur3)/launch/nodelaunch.launch"/>
+
+</launch>

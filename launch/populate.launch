@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<launch>
+  <node name="spawnEnvironment" 
+	pkg="gazebo_ros" type="spawn_model" 
+	args="-sdf 
+	-model environment_erc 
+	-x 0.0 -y 2.0 -z 4.0 
+	-file $(find almasim)/models/environment/environment_erc.sdf"
+	></node>
+
+  <node name="spawnImu" 
+	pkg="gazebo_ros" type="spawn_model" 
+	args="-sdf 
+	-model imu_module 
+	-x 0.0 -y 2.0 -z 2.0 
+	-file $(find almasim)/models/imu_module/imu_module.sdf"
+	></node>
+
+  <node name="spawnCover" 
+	pkg="gazebo_ros" type="spawn_model" 
+	args="-sdf 
+	-model window_cover 
+	-x 0.0 -y 2.0 -z 6.0 
+	-file $(find almasim)/models/window_cover/window_cover.sdf"
+	></node>
+</launch>

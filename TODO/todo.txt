@@ -1,0 +1,14 @@
+new launchers
+
+extract sections from existing files in the directory file2move:
+
+-new launcher for manipulator
+-new launcher for fixed camera
+
+EXPECTED
+
+new launcher with elements added to simulation by us (populate2) to robot urdf
+
+
+
+http://wiki.ros.org/xacro#Conditional_Blocks

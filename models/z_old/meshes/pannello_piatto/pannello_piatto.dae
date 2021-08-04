@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.92.0 commit date:2021-02-24, commit time:16:25, hash:02948a2cab44</authoring_tool>
+    </contributor>
+    <created>2021-04-12T00:24:26</created>
+    <modified>2021-04-12T00:24:26</modified>
+    <unit name="millimeter" meter="0.001"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material_001-effect">
+      <profile_COMMON>
+        <newparam sid="m101_jpg_001_jpg-surface">
+          <surface type="2D">
+            <init_from>m101_jpg_001_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="m101_jpg_001_jpg-sampler">
+          <sampler2D>
+            <source>m101_jpg_001_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0.1328681 0.1328681 0.1328681 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="m101_jpg_001_jpg-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_002-effect">
+      <profile_COMMON>
+        <newparam sid="m102_jpg_001_jpg-surface">
+          <surface type="2D">
+            <init_from>m102_jpg_001_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="m102_jpg_001_jpg-sampler">
+          <sampler2D>
+            <source>m102_jpg_001_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0.1149352 0.1149352 0.1149352 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="m102_jpg_001_jpg-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_003-effect">
+      <profile_COMMON>
+        <newparam sid="m103_jpg_001_jpg-surface">
+          <surface type="2D">
+            <init_from>m103_jpg_001_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="m103_jpg_001_jpg-sampler">
+          <sampler2D>
+            <source>m103_jpg_001_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0.1328599 0.1328599 0.1328599 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="m103_jpg_001_jpg-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_004-effect">
+      <profile_COMMON>
+        <newparam sid="m104_jpg_001_jpg-surface">
+          <surface type="2D">
+            <init_from>m104_jpg_001_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="m104_jpg_001_jpg-sampler">
+          <sampler2D>
+            <source>m104_jpg_001_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0.2018953 0.2018953 0.2018953 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="m104_jpg_001_jpg-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_005-effect">
+      <profile_COMMON>
+        <newparam sid="m105_jpg_001_jpg-surface">
+          <surface type="2D">
+            <init_from>m105_jpg_001_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="m105_jpg_001_jpg-sampler">
+          <sampler2D>
+            <source>m105_jpg_001_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0.1375788 0.1375788 0.1375788 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="m105_jpg_001_jpg-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_006-effect">
+      <profile_COMMON>
+        <newparam sid="m106_jpg_001_jpg-surface">
+          <surface type="2D">
+            <init_from>m106_jpg_001_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="m106_jpg_001_jpg-sampler">
+          <sampler2D>
+            <source>m106_jpg_001_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0.1959828 0.1959828 0.1959828 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="m106_jpg_001_jpg-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_007-effect">
+      <profile_COMMON>
+        <newparam sid="m107_jpg_001_jpg-surface">
+          <surface type="2D">
+            <init_from>m107_jpg_001_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="m107_jpg_001_jpg-sampler">
+          <sampler2D>
+            <source>m107_jpg_001_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0.2018952 0.2018952 0.2018952 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="m107_jpg_001_jpg-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_008-effect">
+      <profile_COMMON>
+        <newparam sid="m108_jpg_001_jpg-surface">
+          <surface type="2D">
+            <init_from>m108_jpg_001_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="m108_jpg_001_jpg-sampler">
+          <sampler2D>
+            <source>m108_jpg_001_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0.1626368 0.1626368 0.1626368 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="m108_jpg_001_jpg-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="m101_jpg_001_jpg" name="m101_jpg_001_jpg">
+      <init_from>m101.jpg.001.jpg</init_from>
+    </image>
+    <image id="m102_jpg_001_jpg" name="m102_jpg_001_jpg">
+      <init_from>m102.jpg.001.jpg</init_from>
+    </image>
+    <image id="m103_jpg_001_jpg" name="m103_jpg_001_jpg">
+      <init_from>m103.jpg.001.jpg</init_from>
+    </image>
+    <image id="m104_jpg_001_jpg" name="m104_jpg_001_jpg">
+      <init_from>m104.jpg.001.jpg</init_from>
+    </image>
+    <image id="m105_jpg_001_jpg" name="m105_jpg_001_jpg">
+      <init_from>m105.jpg.001.jpg</init_from>
+    </image>
+    <image id="m106_jpg_001_jpg" name="m106_jpg_001_jpg">
+      <init_from>m106.jpg.001.jpg</init_from>
+    </image>
+    <image id="m107_jpg_001_jpg" name="m107_jpg_001_jpg">
+      <init_from>m107.jpg.001.jpg</init_from>
+    </image>
+    <image id="m108_jpg_001_jpg" name="m108_jpg_001_jpg">
+      <init_from>m108.jpg.001.jpg</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="Material_001-material" name="Material.001">
+      <instance_effect url="#Material_001-effect"/>
+    </material>
+    <material id="Material_002-material" name="Material.002">
+      <instance_effect url="#Material_002-effect"/>
+    </material>
+    <material id="Material_003-material" name="Material.003">
+      <instance_effect url="#Material_003-effect"/>
+    </material>
+    <material id="Material_004-material" name="Material.004">
+      <instance_effect url="#Material_004-effect"/>
+    </material>
+    <material id="Material_005-material" name="Material.005">
+      <instance_effect url="#Material_005-effect"/>
+    </material>
+    <material id="Material_006-material" name="Material.006">
+      <instance_effect url="#Material_006-effect"/>
+    </material>
+    <material id="Material_007-material" name="Material.007">
+      <instance_effect url="#Material_007-effect"/>
+    </material>
+    <material id="Material_008-material" name="Material.008">
+      <instance_effect url="#Material_008-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Pannello_Piatto-mesh" name="Pannello Piatto">
+      <mesh>
+        <source id="Pannello_Piatto-mesh-positions">
+          <float_array id="Pannello_Piatto-mesh-positions-array" count="276">210 7 110 210 0 110 210 7 55 210 0 0 210 7 4.999999 210 7 0 4.999995 7 110 0 7 110 0 0 110 155 7 110 105 7 110 55 7 110 0 7 55 0 0 0 0 7 4.999999 0 7 0 4.999995 7 0 55 7 0 105 7 0 155 7 0 200 7 100 200 7 60 160 7 60 155 7 55 160 7 100 200 7 50 200 7 9.999999 160 7 9.999999 155 7 4.999999 160 7 50 150 7 100 150 7 60 110 7 60 105 7 55 110 7 100 150 7 50 150 7 9.999999 110 7 9.999999 105 7 4.999999 110 7 50 100 7 100 100 7 60 60 7 60 55 7 55 60 7 100 100 7 50 100 7 9.999999 60 7 9.999999 55 7 4.999999 60 7 50 9.999999 7 100 9.999999 7 60 4.999995 7 55 50 7 60 50 7 100 9.999999 7 50 9.999999 7 9.999999 4.999995 7 4.999999 50 7 9.999999 50 7 50 9.999999 10 50 9.999999 10 9.999999 50 10 50 50 10 9.999999 9.999999 10 100 9.999999 10 60 50 10 100 50 10 60 60 10 100 60 10 60 100 10 100 100 10 60 160 10 50 160 10 9.999999 200 10 50 200 10 9.999999 110 10 50 110 10 9.999999 150 10 50 150 10 9.999999 60 10 50 60 10 9.999999 100 10 50 100 10 9.999999 160 10 100 160 10 60 200 10 100 200 10 60 110 10 100 110 10 60 150 10 100 150 10 60</float_array>
+          <technique_common>
+            <accessor source="#Pannello_Piatto-mesh-positions-array" count="92" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Pannello_Piatto-mesh-normals">
+          <float_array id="Pannello_Piatto-mesh-normals-array" count="33">1 0 0 1 1.39509e-6 0 0 0 1 -1 0 0 0 0 -1 0 -1 0 0 1 0 0 1 -2.44141e-7 0 1 -2.44141e-7 0 1 0 0 1 1.90735e-7</float_array>
+          <technique_common>
+            <accessor source="#Pannello_Piatto-mesh-normals-array" count="11" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Pannello_Piatto-mesh-map-0">
+          <float_array id="Pannello_Piatto-mesh-map-0-array" count="1080">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9.998e-5 0.9999 9.998e-5 9.998e-5 0.9998999 0.9999001 0.9998999 0.9999001 9.998e-5 9.998e-5 0.9999 1.00123e-4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9.998e-5 0.9999 9.998e-5 9.998e-5 0.9998999 0.9999001 0.9998999 0.9999001 9.998e-5 9.998e-5 0.9999 1.00171e-4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9.998e-5 0.9998998 1.00171e-4 9.998e-5 0.9999 0.9998999 0.9999 0.9998999 1.00171e-4 9.998e-5 0.9999001 1.00075e-4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9.998e-5 0.9999 9.998e-5 9.998e-5 0.9999 0.9999001 0.9999 0.9999001 9.998e-5 9.998e-5 0.9999 1.00052e-4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9.998e-5 0.9999 9.998e-5 9.998e-5 0.9999 0.9999001 0.9999 0.9999001 9.998e-5 9.998e-5 0.9999 1.00075e-4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9.998e-5 0.9998999 9.998e-5 9.998e-5 0.9999 0.9999 0.9999 0.9999 9.998e-5 9.998e-5 0.9999001 1.00052e-4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9.998e-5 0.9998999 9.998e-5 9.998e-5 0.9998999 0.9999001 0.9998999 0.9999001 9.998e-5 9.998e-5 0.9998999 1.00075e-4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9.998e-5 0.9998999 9.998e-5 9.998e-5 0.9998999 0.9998999 0.9998999 0.9998999 9.998e-5 9.998e-5 0.9999001 9.998e-5</float_array>
+          <technique_common>
+            <accessor source="#Pannello_Piatto-mesh-map-0-array" count="540" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Pannello_Piatto-mesh-vertices">
+          <input semantic="POSITION" source="#Pannello_Piatto-mesh-positions"/>
+        </vertices>
+        <triangles material="Material_001-material" count="166">
+          <input semantic="VERTEX" source="#Pannello_Piatto-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Pannello_Piatto-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Pannello_Piatto-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 2 0 3 1 0 4 3 0 5 2 1 6 3 1 7 4 1 8 4 0 9 3 0 10 5 0 11 6 2 12 7 2 13 8 2 14 0 2 15 9 2 16 1 2 17 1 2 18 9 2 19 10 2 20 1 2 21 10 2 22 8 2 23 8 2 24 10 2 25 11 2 26 8 2 27 11 2 28 6 2 29 8 3 30 7 3 31 12 3 32 8 3 33 12 3 34 13 3 35 13 3 36 12 3 37 14 3 38 13 3 39 14 3 40 15 3 41 13 4 42 15 4 43 16 4 44 16 4 45 17 4 46 13 4 47 13 4 48 17 4 49 18 4 50 13 4 51 18 4 52 3 4 53 3 4 54 18 4 55 19 4 56 3 4 57 19 4 58 5 4 59 8 5 60 13 5 61 1 5 62 1 5 63 13 5 64 3 5 65 20 6 66 0 6 67 21 6 68 21 6 69 0 6 70 2 6 71 21 6 72 2 6 73 22 6 74 22 6 75 2 6 76 23 6 77 22 6 78 23 6 79 24 6 80 24 6 81 23 6 82 9 6 83 24 6 84 9 6 85 20 6 86 20 6 87 9 6 88 0 6 89 25 6 90 2 6 91 26 6 92 26 6 93 2 6 94 4 6 95 26 6 96 4 6 97 27 6 98 27 6 99 4 6 100 28 6 101 27 6 102 28 6 103 29 6 104 29 6 105 28 6 106 23 6 107 29 6 108 23 6 109 25 6 110 25 6 111 23 6 112 2 6 113 30 6 114 9 6 115 31 6 116 31 6 117 9 6 118 23 6 119 31 6 120 23 6 121 32 6 122 32 6 123 23 6 124 33 6 125 32 6 126 33 6 127 34 6 128 34 6 129 33 6 130 10 6 131 34 6 132 10 6 133 30 6 134 30 6 135 10 6 136 9 6 137 35 6 138 23 6 139 36 6 140 36 6 141 23 6 142 28 6 143 36 6 144 28 6 145 37 6 146 37 6 147 28 6 148 38 6 149 37 6 150 38 6 151 39 6 152 39 6 153 38 6 154 33 6 155 39 6 156 33 6 157 35 6 158 35 6 159 33 6 160 23 6 161 40 6 162 10 6 163 41 6 164 41 6 165 10 6 166 33 6 167 41 6 168 33 6 169 42 6 170 42 6 171 33 6 172 43 6 173 42 6 174 43 6 175 44 6 176 44 6 177 43 6 178 11 6 179 44 6 180 11 6 181 40 6 182 40 6 183 11 6 184 10 6 185 45 6 186 33 6 187 46 6 188 46 6 189 33 6 190 38 6 191 46 6 192 38 6 193 47 6 194 47 6 195 38 6 196 48 6 197 47 6 198 48 6 199 49 6 200 49 6 201 48 6 202 43 6 203 49 6 204 43 6 205 45 6 206 45 6 207 43 6 208 33 6 209 50 6 210 51 6 211 52 6 212 52 7 213 51 7 214 43 7 215 43 6 216 51 6 217 53 6 218 43 6 219 53 6 220 11 6 221 11 6 222 53 6 223 54 6 224 11 6 225 54 6 226 6 6 227 55 6 228 56 6 229 57 6 230 57 8 231 56 8 232 48 8 233 48 6 234 56 6 235 58 6 236 48 6 237 58 6 238 43 6 239 43 6 240 58 6 241 59 6 242 43 6 243 59 6 244 52 6 245 54 9 246 50 9 247 6 9 248 6 6 249 50 6 250 52 6 251 6 6 252 52 6 253 7 6 254 7 6 255 52 6 256 12 6 257 59 10 258 55 10 259 52 10 260 52 6 261 55 6 262 57 6 263 52 6 264 57 6 265 12 6 266 12 6 267 57 6 268 14 6 269 4 6 270 5 6 271 28 6 272 28 6 273 5 6 274 19 6 275 28 6 276 19 6 277 38 6 278 38 6 279 19 6 280 18 6 281 38 6 282 18 6 283 48 6 284 48 6 285 18 6 286 17 6 287 48 6 288 17 6 289 57 6 290 57 6 291 17 6 292 16 6 293 57 6 294 16 6 295 14 6 296 14 6 297 16 6 298 15 6 299 60 3 300 61 3 301 55 3 302 55 3 303 61 3 304 56 3 305 62 2 306 60 2 307 59 2 308 59 2 309 60 2 310 55 2 311 63 0 312 62 0 313 58 0 314 58 0 315 62 0 316 59 0 317 61 4 318 63 4 319 56 4 320 56 4 321 63 4 322 58 4 323 64 3 330 65 3 331 50 3 332 50 3 333 65 3 334 51 3 335 66 2 336 64 2 337 54 2 338 54 2 339 64 2 340 50 2 341 67 0 342 66 0 343 53 0 344 53 0 345 66 0 346 54 0 347 65 4 348 67 4 349 51 4 350 51 4 351 67 4 352 53 4 353 68 3 360 69 3 361 44 3 362 44 3 363 69 3 364 42 3 365 70 2 366 68 2 367 40 2 368 40 2 369 68 2 370 44 2 371 71 0 372 70 0 373 41 0 374 41 0 375 70 0 376 40 0 377 69 4 378 71 4 379 42 4 380 42 4 381 71 4 382 41 4 383 72 3 390 73 3 391 29 3 392 29 3 393 73 3 394 27 3 395 74 2 396 72 2 397 25 2 398 25 2 399 72 2 400 29 2 401 75 0 402 74 0 403 26 0 404 26 0 405 74 0 406 25 0 407 73 4 408 75 4 409 27 4 410 27 4 411 75 4 412 26 4 413 76 3 420 77 3 421 39 3 422 39 3 423 77 3 424 37 3 425 78 2 426 76 2 427 35 2 428 35 2 429 76 2 430 39 2 431 79 0 432 78 0 433 36 0 434 36 0 435 78 0 436 35 0 437 77 4 438 79 4 439 37 4 440 37 4 441 79 4 442 36 4 443 80 3 450 81 3 451 49 3 452 49 3 453 81 3 454 47 3 455 82 2 456 80 2 457 45 2 458 45 2 459 80 2 460 49 2 461 83 0 462 82 0 463 46 0 464 46 0 465 82 0 466 45 0 467 81 4 468 83 4 469 47 4 470 47 4 471 83 4 472 46 4 473 84 3 480 85 3 481 24 3 482 24 3 483 85 3 484 22 3 485 86 2 486 84 2 487 20 2 488 20 2 489 84 2 490 24 2 491 87 0 492 86 0 493 21 0 494 21 0 495 86 0 496 20 0 497 85 4 498 87 4 499 22 4 500 22 4 501 87 4 502 21 4 503 86 6 504 87 6 505 84 6 506 84 6 507 87 6 508 85 6 509 88 3 510 89 3 511 34 3 512 34 3 513 89 3 514 32 3 515 90 2 516 88 2 517 30 2 518 30 2 519 88 2 520 34 2 521 91 0 522 90 0 523 31 0 524 31 0 525 90 0 526 30 0 527 89 4 528 91 4 529 32 4 530 32 4 531 91 4 532 31 4 533</p>
+        </triangles>
+        <triangles material="Material_002-material" count="2">
+          <input semantic="VERTEX" source="#Pannello_Piatto-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Pannello_Piatto-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Pannello_Piatto-mesh-map-0" offset="2" set="0"/>
+          <p>90 6 534 91 6 535 88 6 536 88 6 537 91 6 538 89 6 539</p>
+        </triangles>
+        <triangles material="Material_003-material" count="2">
+          <input semantic="VERTEX" source="#Pannello_Piatto-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Pannello_Piatto-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Pannello_Piatto-mesh-map-0" offset="2" set="0"/>
+          <p>70 6 384 71 6 385 68 6 386 68 6 387 71 6 388 69 6 389</p>
+        </triangles>
+        <triangles material="Material_004-material" count="2">
+          <input semantic="VERTEX" source="#Pannello_Piatto-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Pannello_Piatto-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Pannello_Piatto-mesh-map-0" offset="2" set="0"/>
+          <p>66 6 354 67 6 355 64 6 356 64 6 357 67 6 358 65 6 359</p>
+        </triangles>
+        <triangles material="Material_005-material" count="2">
+          <input semantic="VERTEX" source="#Pannello_Piatto-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Pannello_Piatto-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Pannello_Piatto-mesh-map-0" offset="2" set="0"/>
+          <p>74 6 414 75 6 415 72 6 416 72 6 417 75 6 418 73 6 419</p>
+        </triangles>
+        <triangles material="Material_006-material" count="2">
+          <input semantic="VERTEX" source="#Pannello_Piatto-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Pannello_Piatto-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Pannello_Piatto-mesh-map-0" offset="2" set="0"/>
+          <p>78 6 444 79 6 445 76 6 446 76 6 447 79 6 448 77 6 449</p>
+        </triangles>
+        <triangles material="Material_007-material" count="2">
+          <input semantic="VERTEX" source="#Pannello_Piatto-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Pannello_Piatto-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Pannello_Piatto-mesh-map-0" offset="2" set="0"/>
+          <p>82 6 474 83 6 475 80 6 476 80 6 477 83 6 478 81 6 479</p>
+        </triangles>
+        <triangles material="Material_008-material" count="2">
+          <input semantic="VERTEX" source="#Pannello_Piatto-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Pannello_Piatto-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Pannello_Piatto-mesh-map-0" offset="2" set="0"/>
+          <p>62 6 324 63 6 325 60 6 326 60 6 327 63 6 328 61 6 329</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Pannello_Piatto" name="Pannello Piatto" type="NODE">
+        <matrix sid="transform">1 0 0 -105 0 -4.37114e-8 -1 55 0 1 -4.37114e-8 0 0 0 0 1</matrix>
+        <instance_geometry url="#Pannello_Piatto-mesh" name="Pannello Piatto">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material_001-material" target="#Material_001-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="Material_002-material" target="#Material_002-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="Material_003-material" target="#Material_003-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="Material_004-material" target="#Material_004-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="Material_005-material" target="#Material_005-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="Material_006-material" target="#Material_006-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="Material_007-material" target="#Material_007-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="Material_008-material" target="#Material_008-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

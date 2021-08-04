@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.92.0 commit date:2021-02-24, commit time:16:25, hash:02948a2cab44</authoring_tool>
+    </contributor>
+    <created>2021-08-02T14:52:59</created>
+    <modified>2021-08-02T14:52:59</modified>
+    <unit name="millimeter" meter="0.001"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_cameras>
+    <camera id="Camera-camera" name="Camera">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">39.59775</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">100</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <shiftx sid="shiftx" type="float">0</shiftx>
+          <shifty sid="shifty" type="float">0</shifty>
+          <dof_distance sid="dof_distance" type="float">10</dof_distance>
+        </technique>
+      </extra>
+    </camera>
+  </library_cameras>
+  <library_lights>
+    <light id="Light-light" name="Light">
+      <technique_common>
+        <point>
+          <color sid="color">1000 1000 1000</color>
+          <constant_attenuation>1</constant_attenuation>
+          <linear_attenuation>0</linear_attenuation>
+          <quadratic_attenuation>0.00111109</quadratic_attenuation>
+        </point>
+      </technique_common>
+      <extra>
+        <technique profile="blender">
+          <type sid="type" type="int">0</type>
+          <flag sid="flag" type="int">0</flag>
+          <mode sid="mode" type="int">1</mode>
+          <gamma sid="blender_gamma" type="float">1</gamma>
+          <red sid="red" type="float">1</red>
+          <green sid="green" type="float">1</green>
+          <blue sid="blue" type="float">1</blue>
+          <shadow_r sid="blender_shadow_r" type="float">0</shadow_r>
+          <shadow_g sid="blender_shadow_g" type="float">0</shadow_g>
+          <shadow_b sid="blender_shadow_b" type="float">0</shadow_b>
+          <energy sid="blender_energy" type="float">1000</energy>
+          <dist sid="blender_dist" type="float">29.99998</dist>
+          <spotsize sid="spotsize" type="float">75</spotsize>
+          <spotblend sid="spotblend" type="float">0.15</spotblend>
+          <att1 sid="att1" type="float">0</att1>
+          <att2 sid="att2" type="float">1</att2>
+          <falloff_type sid="falloff_type" type="int">2</falloff_type>
+          <clipsta sid="clipsta" type="float">0.04999995</clipsta>
+          <clipend sid="clipend" type="float">30.002</clipend>
+          <bias sid="bias" type="float">1</bias>
+          <soft sid="soft" type="float">3</soft>
+          <bufsize sid="bufsize" type="int">2880</bufsize>
+          <samp sid="samp" type="int">3</samp>
+          <buffers sid="buffers" type="int">1</buffers>
+          <area_shape sid="area_shape" type="int">1</area_shape>
+          <area_size sid="area_size" type="float">0.1</area_size>
+          <area_sizey sid="area_sizey" type="float">0.1</area_sizey>
+          <area_sizez sid="area_sizez" type="float">1</area_sizez>
+        </technique>
+      </extra>
+    </light>
+  </library_lights>
+  <library_effects>
+    <effect id="aruco_orig10_50mm-effect">
+      <profile_COMMON>
+        <newparam sid="aruco_orig10_40mm_jpg-surface">
+          <surface type="2D">
+            <init_from>aruco_orig10_40mm_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="aruco_orig10_40mm_jpg-sampler">
+          <sampler2D>
+            <source>aruco_orig10_40mm_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0.03521795 0.03521795 0.03521795 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="aruco_orig10_40mm_jpg-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="white-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="aruco_orig10_40mm_jpg" name="aruco_orig10_40mm_jpg">
+      <init_from>aruco_orig10_40mm.jpg</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="aruco_orig10_50mm-material" name="aruco_orig10_50mm">
+      <instance_effect url="#aruco_orig10_50mm-effect"/>
+    </material>
+    <material id="white-material" name="white">
+      <instance_effect url="#white-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Erc_02_011_Imu_Sing_No_Aruco-mesh" name="Erc 02 011 Imu Sing No Aruco">
+      <mesh>
+        <source id="Erc_02_011_Imu_Sing_No_Aruco-mesh-positions">
+          <float_array id="Erc_02_011_Imu_Sing_No_Aruco-mesh-positions-array" count="144">-23 -82.5 -23 23 -82.5 23 -23 -82.5 23 -23 -80.5 25 -25 -80.5 -23 -25 -80.5 23 -24 -81.5 24 23 -82.5 -23 25 -80.5 23 23 -80.5 25 24 -81.5 24 23 -80.5 -25 25 -80.5 -23 24 -81.5 -24 -24 -81.5 -24 -23 -80.5 -25 -23 82.5 23 23 82.5 -23 -23 82.5 -23 -23 80.5 -25 -25 80.5 23 -25 80.5 -23 -24 81.5 -24 23 82.5 23 25 80.5 -23 24 81.5 -24 23 80.5 -25 23 80.5 25 24 81.5 24 25 80.5 23 -24 81.5 24 -23 80.5 25 22.5 80 -25 -22.5 -80 -25 22.5 -80 -25 22.5 -80 -26.8 22.5 80 -26.8 -22.5 80 -25 -22.5 -80 -26.8 -22.5 80 -26.8 20 -20 25 -20 -20 25 -20 20 25 -20 20 25.6 20 20 25 20 20 25.6 -20 -20 25.6 20 -20 25.6</float_array>
+          <technique_common>
+            <accessor source="#Erc_02_011_Imu_Sing_No_Aruco-mesh-positions-array" count="48" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Erc_02_011_Imu_Sing_No_Aruco-mesh-normals">
+          <float_array id="Erc_02_011_Imu_Sing_No_Aruco-mesh-normals-array" count="54">0 -1 0 0 -0.7071068 0.7071068 -0.7071068 -0.7071068 0 0.7071068 -0.7071068 0 0 -0.7071068 -0.7071068 0 1 0 0 0.7071068 -0.7071068 -0.7071068 0.7071068 0 0.7071068 0.7071068 0 0 0.7071068 0.7071068 -1 0 0 -0.7071068 0 0.7071068 -0.7071068 0 -0.7071068 0 0 1 0.7071068 0 0.7071068 1 0 0 0.7071068 0 -0.7071068 0 0 -1</float_array>
+          <technique_common>
+            <accessor source="#Erc_02_011_Imu_Sing_No_Aruco-mesh-normals-array" count="18" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Erc_02_011_Imu_Sing_No_Aruco-mesh-map-0">
+          <float_array id="Erc_02_011_Imu_Sing_No_Aruco-mesh-map-0-array" count="504">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4.03711e-4 0.9988894 1.000247 0.001270413 0.9990884 0.9985978 -4.03711e-4 0.9988894 -3.69249e-4 0.001950681 1.000247 0.001270413</float_array>
+          <technique_common>
+            <accessor source="#Erc_02_011_Imu_Sing_No_Aruco-mesh-map-0-array" count="252" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Erc_02_011_Imu_Sing_No_Aruco-mesh-vertices">
+          <input semantic="POSITION" source="#Erc_02_011_Imu_Sing_No_Aruco-mesh-positions"/>
+        </vertices>
+        <triangles material="aruco_orig10_50mm-material" count="21">
+          <input semantic="VERTEX" source="#Erc_02_011_Imu_Sing_No_Aruco-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Erc_02_011_Imu_Sing_No_Aruco-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Erc_02_011_Imu_Sing_No_Aruco-mesh-map-0" offset="2" set="0"/>
+          <p>6 11 117 3 11 118 5 11 119 14 12 126 4 12 127 15 12 128 22 12 132 19 12 133 21 12 134 30 11 135 20 11 136 31 11 137 28 14 147 27 14 148 29 14 149 10 14 153 8 14 154 9 14 155 13 16 165 11 16 166 12 16 167 32 13 180 33 13 181 34 13 182 32 13 192 37 13 193 33 13 194 40 17 216 41 17 217 42 17 218 43 10 219 42 10 220 41 10 221 44 17 222 40 17 223 42 17 224 45 5 225 44 5 226 42 5 227 45 5 228 42 5 229 43 5 230 46 0 231 41 0 232 40 0 233 46 10 234 43 10 235 41 10 236 47 15 237 40 15 238 44 15 239 46 0 240 40 0 241 47 0 242 47 15 243 44 15 244 45 15 245 46 13 246 45 13 247 43 13 248 46 13 249 47 13 250 45 13 251</p>
+        </triangles>
+        <triangles material="white-material" count="63">
+          <input semantic="VERTEX" source="#Erc_02_011_Imu_Sing_No_Aruco-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Erc_02_011_Imu_Sing_No_Aruco-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Erc_02_011_Imu_Sing_No_Aruco-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 0 1 2 0 2 3 1 3 2 1 4 1 1 5 4 2 6 0 2 7 2 2 8 4 2 9 2 2 10 5 2 11 6 2 12 5 2 13 2 2 14 6 1 15 2 1 16 3 1 17 0 0 18 7 0 19 1 0 20 8 3 21 1 3 22 7 3 23 3 1 24 1 1 25 9 1 26 10 1 27 9 1 28 1 1 29 10 3 30 1 3 31 8 3 32 11 4 33 7 4 34 0 4 35 8 3 36 7 3 37 12 3 38 13 3 39 12 3 40 7 3 41 13 4 42 7 4 43 11 4 44 14 2 45 0 2 46 4 2 47 11 4 48 0 4 49 15 4 50 14 4 51 15 4 52 0 4 53 16 5 54 17 5 55 18 5 56 19 6 57 18 6 58 17 6 59 20 7 60 16 7 61 18 7 62 20 7 63 18 7 64 21 7 65 22 7 66 21 7 67 18 7 68 22 6 69 18 6 70 19 6 71 16 5 72 23 5 73 17 5 74 24 8 75 17 8 76 23 8 77 25 8 78 17 8 79 24 8 80 19 6 81 17 6 82 26 6 83 25 6 84 26 6 85 17 6 86 27 9 87 23 9 88 16 9 89 28 9 90 23 9 91 27 9 92 24 8 93 23 8 94 29 8 95 28 8 96 29 8 97 23 8 98 30 7 99 16 7 100 20 7 101 27 9 102 16 9 103 31 9 104 30 9 105 31 9 106 16 9 107 20 10 108 4 10 109 5 10 110 31 11 111 20 11 112 5 11 113 3 11 114 31 11 115 5 11 116 20 10 120 21 10 121 4 10 122 15 12 123 4 12 124 21 12 125 15 12 129 21 12 130 19 12 131 3 13 138 27 13 139 31 13 140 3 13 141 9 13 142 27 13 143 29 14 144 27 14 145 9 14 146 29 14 150 9 14 151 8 14 152 24 15 156 8 15 157 12 15 158 26 16 159 24 16 160 12 16 161 11 16 162 26 16 163 12 16 164 24 15 168 29 15 169 8 15 170 25 16 171 24 16 172 26 16 173 11 17 174 19 17 175 26 17 176 11 17 177 15 17 178 19 17 179 35 0 183 34 0 184 33 0 185 36 15 186 32 15 187 34 15 188 36 15 189 34 15 190 35 15 191 38 10 195 33 10 196 37 10 197 38 0 198 35 0 199 33 0 200 39 5 201 37 5 202 32 5 203 38 10 204 37 10 205 39 10 206 39 5 207 32 5 208 36 5 209 39 17 210 36 17 211 35 17 212 38 17 213 39 17 214 35 17 215</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Erc_02_011_Imu_Sing_No_Aruco" name="Erc 02 011 Imu Sing No Aruco" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Erc_02_011_Imu_Sing_No_Aruco-mesh" name="Erc 02 011 Imu Sing No Aruco">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="aruco_orig10_50mm-material" target="#aruco_orig10_50mm-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="white-material" target="#white-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Camera" name="Camera" type="NODE">
+        <matrix sid="transform">0.6859207 -0.3240135 0.6515582 7.358891 0.7276763 0.3054208 -0.6141704 -6.925791 0 0.8953956 0.4452714 4.958309 0 0 0 1</matrix>
+        <instance_camera url="#Camera-camera"/>
+      </node>
+      <node id="Light" name="Light" type="NODE">
+        <matrix sid="transform">-0.2908646 -0.7711008 0.5663932 4.076245 0.9551712 -0.1998834 0.2183912 1.005454 -0.05518906 0.6045247 0.7946723 5.903862 0 0 0 1</matrix>
+        <instance_light url="#Light-light"/>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
