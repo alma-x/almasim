@@ -27,7 +27,7 @@
   <joint name="base_link_fix_location" type="fixed">
     <parent link="world" />
     <child link = "base_link" />
-    <origin xyz="0.0 -0.052 -0.438" rpy="0.0 0.0 0.0" />
+    <origin xyz="0.0 -0.052 -0.42" rpy="0.0 0.0 1.570796 " />
   </joint>
 
   <!-- z value of joint same as height of robot base plane

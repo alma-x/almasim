@@ -6,6 +6,12 @@
   
 	<!--__________________SIMULATION_____________________-->
 
+  <!--include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="worlds/empty.world"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="gui" value="$(arg gui)"/>
+  </include-->
+
 	<!-- ENVIRONMENT -->
   <!-- load almax world as argument of gazebo empty world-->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -25,17 +31,24 @@
 
   <!-- push robot_description to factory and spawn robot in gazebo -->
   <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model"
-        args="-urdf 
-							-param robot_description 
-							-model robot 
-							-x 0 -y 0 -z 0.6 
-							-J robot::shoulder_lift_joint -1.5707 
-							-unpause "
+        args="	-urdf 
+		-param robot_description 
+		-model robot 
+		-x 0 -y 0 -z 0.6 
+		-J robot::shoulder_lift_joint -1.5707 
+		-unpause "
         respawn="false" output="screen" />
+		<!--
+		-J robot::shoulder_pan_joint -1.5707 
+		-->
+		<!-- change z accordingly, possibly at 0.16, OLD z 0.6-->
 
-
-
-	<!--_______CONTROLLERS_____________-->
+  <!--node name="spawn_environment" pkg="gazebo_ros" type="spawn_model"
+        args="	-sdf 
+		-model robot 
+		-file /home/uga/ros/erc/src/almasim/models/sim_erc.sdf"
+        respawn="false" output="screen" /-->
+  <!--_______CONTROLLERS_____________-->
 
   <include file="$(find ur_gazebo)/launch/controller_utils.launch"/>
 
