@@ -113,22 +113,20 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/uga/ros/erc/src/almasim/models/environment/environment.dae</uri>
-              <!--uri>model://models/environment/environment.dae</uri-->
+              <uri>model://environment/environment.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
           <transparency>0</transparency>
           <cast_shadows>1</cast_shadows>
         </visual>
-        <collision name='collision'>
+        <!--collision name='collision'>
           <laser_retro>0</laser_retro>
           <max_contacts>10</max_contacts>
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/uga/ros/erc/src/almasim/models/environment/environment.dae</uri>
-              <!--uri>model://models/environment/environment.dae</uri-->
+              <uri>model://environment/environment.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -177,7 +175,7 @@
               </bullet>
             </contact>
           </surface>
-        </collision>
+        </collision-->
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
@@ -207,8 +205,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/uga/ros/erc/src/almasim/models/imu_module/imu_module.dae</uri>
-              <!--uri>model://models/imu_module/imu_module.dae</uri-->
+              <uri>model://imu_module/imu_module.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -221,8 +218,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/uga/ros/erc/src/almasim/models/imu_module/imu_module.dae</uri>
-              <!--uri>model://models/imu_module/imu_module.dae</uri-->
+              <uri>model://imu_module/imu_module.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -301,8 +297,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/uga/ros/erc/src/almasim/models/window_cover/window_cover.dae</uri>
-              <!--uri>model://models/window_cover/window_cover.dae</uri-->
+              <uri>model://window_cover/window_cover.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -315,8 +310,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/uga/ros/erc/src/almasim/models/window_cover/window_cover.dae</uri>
-              <!--uri>model://models/window_cover/window_cover.dae</uri-->
+              <uri>model://window_cover/window_cover.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>

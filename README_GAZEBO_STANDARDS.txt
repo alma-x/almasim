@@ -153,7 +153,10 @@ FILE model.config
 ENVIRONMENTAL VARIABLE
 
 Cli:
-  export GAZEBO_MODEL_PATH=/home/user/catkin_ws/src/
+  export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:path-to-model
+
+Check GAZEBO_MODEL_PATH:
+rospack plugins --attrib=gazebo_model_path gazebo_ros
 
 
 EXPORTING MODELS FROM package.xml
