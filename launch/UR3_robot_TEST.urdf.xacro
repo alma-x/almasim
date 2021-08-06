@@ -3,25 +3,37 @@
        name="ur3" >
 
   <!-- robot mechanical parameters -->
-  <xacro:arg name="limited" default="false"/>
+  <xacro:property name="joint_limited" default="true"/>
+
   <xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface"/>
-  <!-- robot positioning parameters -->
-  <xacro:arg name="joint_x" default="0"/>
-  <xacro:arg name="joint_y" default="0"/>
-  <xacro:arg name="joint_z" default="0"/>
-  <xacro:arg name="joint_R" default="0"/>
-  <xacro:arg name="joint_P" default="0"/>
+  <!-- robot positioning constraint parameters -->
+  <xacro:arg name="fix_joint_x" default="0"/>
+  <xacro:arg name="fix_joint_y" default="-0.052"/>
+  <xacro:arg name="fix_joint_z" default="0.001"/>
+  <xacro:arg name="fix_joint_R" default="0.0"/>
+  <xacro:arg name="fix_joint_P" default="0.0"/>
+  <xacro:arg name="fix_joint_Y" default="1.570796"/>
+  <!-- z:  to avoid collision with box underneath-->
+  <!-- z value: minimal gap to avoid collision with robot joint base
+
+	y value range: [-0.056 -0.048]=[farest closest] to the panel   -->
+  <!-- TODO verify wich REFSYS moveit is using: if there is discrepancy
+	wrt to the spawn one and the one with varied y here 
+	TODO-->
+
 
   <!-- common stuff -->
   <xacro:include filename="$(find ur_description)/urdf/common.gazebo.xacro" />
 
   <!-- ur3 macro inclusion -->
-  <xacro:include filename="$(find almasim)/launch/UR3_assembly.urdf.xacro" />
+  <xacro:include filename="$(find almasim)/launch/UR3_assembler.urdf.xacro" />
 
   <!-- ARM SPAWN--> 
+   
   <!--limited joint motion-->
-  <xacro: if value="$(limited)">
-	  <xacro:ur3_robot prefix="" joint_limited="true"
+  <!--xacro: if value="${limited=='true'}"-->
+  <xacro: if value="${joint_limited}">
+	  <xacro:ur3_robot prefix="" joint_limited="$(arg joint_limited)"
 	    shoulder_pan_lower_limit="${-pi}" shoulder_pan_upper_limit="${pi}"
 	    shoulder_lift_lower_limit="${-pi}" shoulder_lift_upper_limit="${pi}"
 	    elbow_joint_lower_limit="${-pi}" elbow_joint_upper_limit="${pi}"
@@ -30,14 +42,14 @@
 	    wrist_3_lower_limit="${-pi}" wrist_3_upper_limit="${pi}"
 	    transmission_hw_interface="$(arg transmission_hw_interface)"
 	  />
-  <xacro:if/>
+  </xacro:if>
 
   <!-- unlimited joint motion-->
-  <xacro:unless value="$(limited)">
-	  <xacro:ur3_robot prefix="" joint_limited="false"
+  <!--xacro:unless value="${limited=='true'}">
+	  <xacro:ur3_robot prefix="" joint_limited="$(arg limited)"
 	    transmission_hw_interface="$(arg transmission_hw_interface)"
 	  />
-  <xacro:unless/>
+  </xacro:unless-->
 
   <!-- constraints-->
   <link name="world" />
@@ -45,11 +57,8 @@
   <joint name="base_link_fix_location" type="fixed">
     <parent link="world" />
     <child link = "base_link" />
-    <origin xyz="0.0 -0.052 0.161" rpy="0.0 0.0 1.570796" />
-    <!--origin xyz="0.0 -0.052 -0.438" rpy="0.0 0.0 0.0" /-->
+    <origin xyz="$(arg fix_joint_x) $(arg fix_joint_y) $(arg fix_joint_z)" 
+ 	    rpy="$(arg fix_joint_R) $(arg fix_joint_P) $(arg fix_joint_Y)" />
   </joint>
-
-  <!-- z value of joint same as height of robot base plane
-	y value range: [-0.056 -0.048]=[farest closest] to the panel   -->
 
 </robot>

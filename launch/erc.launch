@@ -23,20 +23,22 @@
 
   <!--_____ send robot urdf to param server _____-->
   <!-- TODO merge erc_robot and erc_joint_limited_robot:
-	check erc_robot_TEST-->
-  <!-- unlimited joint motion -->
-  <param unless="$(arg limited)" 
-	name="robot_description" 
+	check erc_robot_TEST-->  
+  <!--param name="robot_description" 
 	command="$(find xacro)/xacro 
-			'$(find almasim)/launch/UR3_robot.urdf.xacro' 
-			transmission_hw_interface:=$(arg transmission_hw_interface) " 
-  />
-			<!--joint_x=
-			joint_y=
-			joint_z=
-			joint_R=
-			joint_P=
-			joint_Y=-->
+			'$(find almasim)/launch/UR3_robot_TEST.urdf.xacro' 
+			transmission_hw_interface:=$(arg transmission_hw_interface)
+			joint_limited:=$(arg limited)" 
+  /TODO-->
+
+<!-- can pass following parameters to set the fix joint between robot and environment
+		fix_joint_x:=0.0
+		fix_joint_y:=0.0
+		fix_joint_z:=0.0
+		fix_joint_R:=0.0
+		fix_joint_P:=0.0
+		fix_joint_Y:=0.0
+-->
 
   <!-- limited joint motion -->
   <param if="$(arg limited)" 
@@ -45,6 +47,14 @@
 			'$(find almasim)/launch/UR3_joint_limited_robot.urdf.xacro' 
 			transmission_hw_interface:=$(arg transmission_hw_interface)" 
   />
+
+  <!-- unlimited joint motion -->
+  <param unless="$(arg limited)" 
+	name="robot_description" 
+	command="$(find xacro)/xacro 
+			'$(find almasim)/launch/UR3_robot.urdf.xacro' 
+			transmission_hw_interface:=$(arg transmission_hw_interface) " 
+  />	
 
   <!--_____ push robot_description to factory and spawn robot in gazebo _____-->
   <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model"
@@ -56,10 +66,14 @@
 		-unpause "
         respawn="false" output="screen" />
 		<!--NOTE unpause avoids rviz crash on startup-->
-
 		<!--
-		-J robot::shoulder_pan_joint -1.5707 
+		accounting for position relative to panel, 
+		may set y=[-0.048 -0.056]
+		already done in child
 		-->
+	<!-- TODO check if REFSYS in use by moveit is the spawn one or the (moved on y)
+ 		one in the child .urdf.xacro file (spawned) 
+	TODO-->
 
 <!--_______________________CONTROLLERS__________________________-->
 
