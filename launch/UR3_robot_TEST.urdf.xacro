@@ -2,18 +2,25 @@
 <robot xmlns:xacro="http://wiki.ros.org/xacro"
        name="ur3" >
 
-  <xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface"/>
+  <!-- robot mechanical parameters -->
   <xacro:arg name="limited" default="false"/>
+  <xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface"/>
+  <!-- robot positioning parameters -->
+  <xacro:arg name="joint_x" default="0"/>
+  <xacro:arg name="joint_y" default="0"/>
+  <xacro:arg name="joint_z" default="0"/>
+  <xacro:arg name="joint_R" default="0"/>
+  <xacro:arg name="joint_P" default="0"/>
 
   <!-- common stuff -->
   <xacro:include filename="$(find ur_description)/urdf/common.gazebo.xacro" />
 
   <!-- ur3 macro inclusion -->
-  <xacro:include filename="$(find almasim)/launch/erc.urdf.xacro" />
+  <xacro:include filename="$(find almasim)/launch/UR3_assembly.urdf.xacro" />
 
   <!-- ARM SPAWN--> 
   <!--limited joint motion-->
-  <xacro: if value="$(limited=='true')">
+  <xacro: if value="$(limited)">
 	  <xacro:ur3_robot prefix="" joint_limited="true"
 	    shoulder_pan_lower_limit="${-pi}" shoulder_pan_upper_limit="${pi}"
 	    shoulder_lift_lower_limit="${-pi}" shoulder_lift_upper_limit="${pi}"
@@ -26,7 +33,7 @@
   <xacro:if/>
 
   <!-- unlimited joint motion-->
-  <xacro:unless value="$(limited=='true')">
+  <xacro:unless value="$(limited)">
 	  <xacro:ur3_robot prefix="" joint_limited="false"
 	    transmission_hw_interface="$(arg transmission_hw_interface)"
 	  />

@@ -1,54 +1,67 @@
 <?xml version="1.0"?>
 <launch>
-  <arg name="limited" default="true" doc="If true, limits joint range [-PI, PI] on all joints." />
+  <!-- simulation parameters-->
   <arg name="paused" default="true" doc="Starts gazebo in paused mode" />
   <arg name="gui" default="true" doc="Starts gazebo gui" />
+  <!-- robot parameters -->
+  <arg name="limited" default="true" doc="If true, limits joint range [-PI, PI] on all joints." />
+  <arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface" />
   
-	<!--__________________SIMULATION_____________________-->
-
-  <!--include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="worlds/empty.world"/>
-    <arg name="paused" value="$(arg paused)"/>
-    <arg name="gui" value="$(arg gui)"/>
-  </include-->
+<!--__________________SIMULATION_____________________-->
 
 	<!-- ENVIRONMENT -->
   <!-- load almax world as argument of gazebo empty world-->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <!--arg name="world_name" value="worlds/empty.world"/-->
     <arg name="world_name" value="$(find almasim)/models/sim_erc.world"/>
     <arg name="paused" value="$(arg paused)"/>
     <arg name="gui" value="$(arg gui)"/>
   </include>
 
 
-  <!-- ROBOT -->
+   <!-- ROBOT -->
 
-  <!-- send robot urdf to param server -->
+  <!--_____ send robot urdf to param server _____-->
+  <!-- TODO merge erc_robot and erc_joint_limited_robot:
+	check erc_robot_TEST-->
+  <!-- unlimited joint motion -->
+  <param unless="$(arg limited)" 
+	name="robot_description" 
+	command="$(find xacro)/xacro 
+			'$(find almasim)/launch/UR3_robot.urdf.xacro' 
+			transmission_hw_interface:=$(arg transmission_hw_interface) " 
+  />
+			<!--joint_x=
+			joint_y=
+			joint_z=
+			joint_R=
+			joint_P=
+			joint_Y=-->
 
-  <include file="$(find almasim)/launch/erc_upload.launch">
-    <arg name="limited" value="$(arg limited)"/>
-  </include>
+  <!-- limited joint motion -->
+  <param if="$(arg limited)" 
+	name="robot_description" 
+	command="$(find xacro)/xacro 
+			'$(find almasim)/launch/UR3_joint_limited_robot.urdf.xacro' 
+			transmission_hw_interface:=$(arg transmission_hw_interface)" 
+  />
 
-  <!-- push robot_description to factory and spawn robot in gazebo -->
+  <!--_____ push robot_description to factory and spawn robot in gazebo _____-->
   <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model"
         args="	-urdf 
 		-param robot_description 
 		-model robot 
-		-x 0 -y 0 -z 0.6 
+		-x 0 -y 0 -z 0.16 
 		-J robot::shoulder_lift_joint -1.5707 
 		-unpause "
         respawn="false" output="screen" />
+		<!--NOTE unpause avoids rviz crash on startup-->
+
 		<!--
 		-J robot::shoulder_pan_joint -1.5707 
 		-->
-		<!-- change z accordingly, possibly at 0.16, OLD z 0.6-->
 
-  <!--node name="spawn_environment" pkg="gazebo_ros" type="spawn_model"
-        args="	-sdf 
-		-model robot 
-		-file /home/uga/ros/erc/src/almasim/models/sim_erc.sdf"
-        respawn="false" output="screen" /-->
-  <!--_______CONTROLLERS_____________-->
+<!--_______________________CONTROLLERS__________________________-->
 
   <include file="$(find ur_gazebo)/launch/controller_utils.launch"/>
 
