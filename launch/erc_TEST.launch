@@ -24,12 +24,12 @@
   <!--_____ send robot urdf to param server _____-->
   <!-- TODO merge erc_robot and erc_joint_limited_robot:
 	check erc_robot_TEST-->  
-  <!--param name="robot_description" 
+  <param name="robot_description" 
 	command="$(find xacro)/xacro 
 			'$(find almasim)/launch/UR3_robot_TEST.urdf.xacro' 
 			transmission_hw_interface:=$(arg transmission_hw_interface)
 			joint_limited:=$(arg limited)" 
-  /TODO-->
+  /><!-- -->
 
 <!-- can pass following parameters to set the fix joint between robot and environment
 		fix_joint_x:=0.0
@@ -40,22 +40,6 @@
 		fix_joint_Y:=0.0
 -->
 
-  <!-- limited joint motion -->
-  <param if="$(arg limited)" 
-	name="robot_description" 
-	command="$(find xacro)/xacro 
-			'$(find almasim)/launch/UR3_joint_limited_robot.urdf.xacro' 
-			transmission_hw_interface:=$(arg transmission_hw_interface)" 
-  />
-
-  <!-- unlimited joint motion -->
-  <param unless="$(arg limited)" 
-	name="robot_description" 
-	command="$(find xacro)/xacro 
-			'$(find almasim)/launch/UR3_robot.urdf.xacro' 
-			transmission_hw_interface:=$(arg transmission_hw_interface) " 
-  />	
-<!-- note: (dash+dash)inorder param in above command no longer needed-->
 
   <!--_____ push robot_description to factory and spawn robot in gazebo _____-->
   <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model"

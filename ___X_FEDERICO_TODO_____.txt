@@ -1,0 +1,25 @@
+DA TESTARE:
+
+SISTEMI DI RIFERIMENTO:
+al momento erc.launch spawna il robot in una determinata posizione per cui la z
+del sistema di riferimento (radice) del robot è al livello giusto, mentre y (direzione
+verso pannello) no, perchè è modificata dal joint fixed creato da ur3(joint_limited)_robot.urdf.xacro
+
+-> il sistema di riferimento visualizzato in gazebo è quindi fuori dalla base del robot (quello vincolato è giusto)
+1) verificare quale venga usato in moveit e se sia quello centrato sul robot ad essere giusto x le trasformazini
+1->) modificare il joint fixed perchè sia xyz="0 0 0" e mettere la variazione di y in spawn:... -y€[-0.048 -0.056]
+
+
+LAUNCHER UNIFICATO:
+non sono riuscito ad usare il blocco xacro:if/unless in ur3(_joint_limited)_robot, ma ho visto che in ur3_assembler è presente un blocco
+del genere che usa il parametro passato joint_limited per settare i limite nel caso serva. ho notato inoltre che i limiti sono già contenuti in assembler, quindi ho tolto il passaggio esplicito nella chiamata ad assembler ed ho provato solo a passare il valore "padre" di joint_limited=limited
+
+2) roslaunch almasim erc_TEST.launch (che chiama ur3_robot_TEST) e controlla che i limiti siano in funzione; per spawnare il robot senza limiti
+aggiuni limited:=false in coda a roslauch
+
+NUOVA SIMULAZIONE PULITA
+
+https://github.com/alma-x/ERC_maintenance_sim
+
+ha fatto storie perchè almasim è già una repo che ho importato, non so se funzioni bene, magari fai qualche prova.
+Nel caso vada tutto bene posso fare un docker con solo la simulazione, così, per i posteri

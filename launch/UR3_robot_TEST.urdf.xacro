@@ -3,7 +3,7 @@
        name="ur3" >
 
   <!-- robot mechanical parameters -->
-  <xacro:property name="joint_limited" default="true"/>
+  <xacro:arg name="joint_limited" default="true"/>
 
   <xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface"/>
   <!-- robot positioning constraint parameters -->
@@ -32,17 +32,20 @@
    
   <!--limited joint motion-->
   <!--xacro: if value="${limited=='true'}"-->
-  <xacro: if value="${joint_limited}">
+  <!--xacro: if value="${joint_limited}"-->
 	  <xacro:ur3_robot prefix="" joint_limited="$(arg joint_limited)"
+	    transmission_hw_interface="$(arg transmission_hw_interface)"
+	  />
+	<!--  copied from xacro above
 	    shoulder_pan_lower_limit="${-pi}" shoulder_pan_upper_limit="${pi}"
 	    shoulder_lift_lower_limit="${-pi}" shoulder_lift_upper_limit="${pi}"
 	    elbow_joint_lower_limit="${-pi}" elbow_joint_upper_limit="${pi}"
 	    wrist_1_lower_limit="${-pi}" wrist_1_upper_limit="${pi}"
 	    wrist_2_lower_limit="${-pi}" wrist_2_upper_limit="${pi}"
 	    wrist_3_lower_limit="${-pi}" wrist_3_upper_limit="${pi}"
-	    transmission_hw_interface="$(arg transmission_hw_interface)"
-	  />
-  </xacro:if>
+
+	-->
+  <!--/xacro:if-->
 
   <!-- unlimited joint motion-->
   <!--xacro:unless value="${limited=='true'}">
