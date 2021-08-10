@@ -9,6 +9,10 @@
   
 <!--__________________SIMULATION_____________________-->
 
+  <!-- setting up models directory-->
+  <env name="GAZEBO_MODEL_PATH" value="$(find almasim)/models"/>
+  <!--env name="GAZEBO_MODEL_PATH" value="$GAZEBO_MODEL_PATH:$(find almasim)/models"/-->
+
 	<!-- ENVIRONMENT -->
   <!-- load almax world as argument of gazebo empty world-->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -62,10 +66,13 @@
         args="	-urdf 
 		-param robot_description 
 		-model robot 
-		-x 0 -y 0 -z 0.16 
+		-x 0 -y 0 -z 0.16
 		-J robot::shoulder_lift_joint -1.5707 
 		-unpause "
         respawn="false" output="screen" />
+		<!-- 
+		-Y 1.5707
+		-->
 		<!--NOTE unpause avoids rviz crash on startup-->
 		<!--
 		accounting for position relative to panel, 
