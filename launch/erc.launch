@@ -67,11 +67,11 @@
 		-param robot_description 
 		-model robot 
 		-x 0 -y 0 -z 0.16
+		-R 0 -P 0 -Y 1.5707
 		-J robot::shoulder_lift_joint -1.5707 
 		-unpause "
         respawn="false" output="screen" />
 		<!-- 
-		-Y 1.5707
 		-->
 		<!--NOTE unpause avoids rviz crash on startup-->
 		<!--
