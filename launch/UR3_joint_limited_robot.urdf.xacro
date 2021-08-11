@@ -6,6 +6,7 @@
   <xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface"/>
   <xacro:arg name="limited" default="true"/>
   <!-- robot positioning constraint parameters -->
+  <!-- WARNIGN following values move the robot from its own reference system-->
   <!--xacro:arg name="fix_joint_x" default="-0.052"/-->
   <xacro:arg name="fix_joint_x" default="0.0"/>
   <xacro:arg name="fix_joint_y" default="0.0"/>
@@ -15,14 +16,6 @@
   <xacro:arg name="fix_joint_P" default="0.0"/>
   <!--xacro:arg name="fix_joint_Y" default="1.570796"/-->
   <xacro:arg name="fix_joint_Y" default="0.0"/>
-
-  <!-- z:  to avoid collision with box underneath-->
-  <!-- z value: minimal gap to avoid collision with robot joint base
-
-	y value range: [-0.056 -0.048]=[farest closest] to the panel   -->
-  <!-- TODO verify wich REFSYS moveit is using: if there is discrepancy
-	wrt to the spawn one and the one with varied y here
-	TODO-->
 
 
   <!-- common stuff -->
