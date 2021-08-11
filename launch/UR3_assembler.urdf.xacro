@@ -498,7 +498,8 @@
       <parent link="camera_link1" />
       <child link="camera_link" />
     </joint>
-    <xacro:camera_mount prefix="camera" topic="camera_image" parent_link="camera_link"/>
+    <!--xacro:camera_mount prefix="camera" topic="camera_image" parent_link="camera_link"/-->
+    <xacro:camera_mount prefix="camera" topic="usb_cam" parent_link="camera_link"/>
 
     <link name="dys_middle">
       <visual>
