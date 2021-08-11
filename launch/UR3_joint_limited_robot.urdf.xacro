@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://wiki.ros.org/xacro"
-       name="ur3" >
+       name="ur3" 
+       params="centered">
 
   <!-- mechanical transmission parameters -->
   <xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface"/>
@@ -9,6 +10,9 @@
   <!-- WARNIGN following values move the robot from its own reference system-->
   <!--xacro:arg name="fix_joint_x" default="0.052"/-->
   <xacro:arg name="fix_joint_x" default="0.0"/>
+  <xacro:if value="${centered}">
+  	<arg fix_joint_x="0.052"/>
+  </xacro:if>
   <xacro:arg name="fix_joint_y" default="0.0"/>
   <!--xacro:arg name="fix_joint_z" default="0.001"/-->
   <xacro:arg name="fix_joint_z" default="0.0"/>
