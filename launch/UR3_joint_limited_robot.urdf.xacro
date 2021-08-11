@@ -6,9 +6,11 @@
   <xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface"/>
   <xacro:arg name="limited" default="true"/>
   <!-- robot positioning constraint parameters -->
-  <xacro:arg name="fix_joint_x" default="-0.052"/>
+  <!--xacro:arg name="fix_joint_x" default="-0.052"/-->
+  <xacro:arg name="fix_joint_x" default="0.0"/>
   <xacro:arg name="fix_joint_y" default="0.0"/>
-  <xacro:arg name="fix_joint_z" default="0.001"/>
+  <!--xacro:arg name="fix_joint_z" default="0.001"/-->
+  <xacro:arg name="fix_joint_z" default="0.0"/>
   <xacro:arg name="fix_joint_R" default="0.0"/>
   <xacro:arg name="fix_joint_P" default="0.0"/>
   <!--xacro:arg name="fix_joint_Y" default="1.570796"/-->
