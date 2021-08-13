@@ -237,7 +237,7 @@
           <geometry>
             <box>
               <!--size>0.05 0.165 0.052</size-->
-              <size>0.051 0.165 0.052</size>
+              <size>0.054 0.165 0.052</size>
 		<!-- increase differenze between  0.05 and 
 		 	uncommented value to toggle gripper hold-->
             </box>
@@ -247,11 +247,11 @@
           <surface>
             <friction>
               <ode>
-                <mu>1</mu>
-                <mu2>1</mu2>
-                <fdir1>0 0 0</fdir1>
-                <slip1>0</slip1>
-                <slip2>0</slip2>
+                <mu>10</mu>
+                <mu2>10</mu2>
+                <fdir1>1 1 1</fdir1>
+                <slip1>1</slip1>
+                <slip2>1</slip2>
               </ode>
               <torsional>
                 <coefficient>1</coefficient>
