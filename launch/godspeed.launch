@@ -1,8 +1,11 @@
 <?xml version="1.0"?>
 <launch>
+  <arg name="gui" default="true" doc="Starts gazebo gui" />
 
   <!-- gazebo simulation-->
-  <include file="$(find almasim)/launch/erc.launch"/>
+  <include file="$(find almasim)/launch/erc.launch">
+	<arg name="gui" value="$(arg gui)"/>
+  </include>
 
   <!-- moveit -->
   <include file="$(find ur3_moveit_config)/launch/ur3_moveit_planning_execution.launch">
