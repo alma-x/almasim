@@ -13,9 +13,9 @@
   </include>
 
   <!-- rviz -->
-  <include file="$(find ur3_moveit_config)/launch/moveit_rviz.launch">
+  <!--include file="$(find ur3_moveit_config)/launch/moveit_rviz.launch">
     <arg name="config" default="true" />
-  </include>
+  </include-->
   <!-- note: rviz requires unpaused simulation or face a startup crash-->
 
   <node pkg="simulation" type="gripper.py"  name="move_group_python_gripper" output="screen"/>
