@@ -1,8 +1,11 @@
 <?xml version="1.0"?>
 <launch>
+  <arg name="gui" default="true"/>
   <!-- Launch gazebo simulation -->
   <!--MODIFICATO-->
-  <include file="$(find almasim)/launch/nuovi/simulatione.launch"/>
+  <include file="$(find almasim)/launch/nuovi/simulatione.launch">
+    <arg name="gui" value="$(arg gui)"/>
+  </include>
 
   <!-- Launch MoveIt!-->
   <!--DA MODIFICARE, MA TENDENZIALMENTE POCO-->
